@@ -7,11 +7,13 @@ const db = require('./db/database');
 const candidateRoutes = require('./routes/candidateRoutes');
 const partyRoutes = require('./routes/partyRoutes');
 const voterRoutes = require('./routes/voterRoutes');
+const voteRoutes = require('./routes/voteRoutes');
 
 
 app.use('/api', candidateRoutes);
 app.use('/api', partyRoutes);
 app.use('/api', voterRoutes);
+app.use('/api', voteRoutes);
 
 //express middleware
 app.use(express.urlencoded({ extended: false }));
